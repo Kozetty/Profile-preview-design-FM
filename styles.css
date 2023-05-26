@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+:root {
+    --guide-outline: 1.5px solid black;
+    --white-color:hsl(255, 100%, 100%);
+    --dark-grayish-blue: hsl(227, 10%, 40%);
+    --dark-desaturated-blue: hsl(229, 20%, 23%);
+}
+body {
+    height: 100vh;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position: -42rem -30rem, 15rem 50rem;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 650px 650px, 600px 600px;
+    background-color: hsl(185, 75%, 39%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    font-size: 1.8rem;
+}
+/* Base styles end here */
+
+
+/* Utility class */
+.flex--column {
+    display: flex;
+    flex-direction: column;
+}
+/* Card section */
+.card {
+    max-width: 320px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--white-color);
+}
+.card__header {
+    overflow: hidden;
+}
+
+/* Profile pic */
+.pic-container {
+    padding: 0.5rem;
+    position: absolute;
+    top: 21%;
+    left: 32.5%;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: var(--white-color);
+}
+.profile-pic {
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+}
+
+/* Name, age and location section */
+.biography-container {
+    margin-top: 6rem;
+    margin-bottom: 2.7rem;
+    align-items: center;
+    gap: 1rem;
+}
+.name-age {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-desaturated-blue);
+}
+.age {
+    padding-left: 0.5rem;
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+.location {
+    font-size: 1.5rem;
+    color: var(--dark-grayish-blue);
+}
+
+/* Social media info section */
+.social-status-container {
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid hsl(227, 10%, 85%);
+}
+.status-info {
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-desaturated-blue);
+}
+.status-type {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--dark-grayish-blue);
+}
+
+/* Desktop Responsiveness */
+@media screen and (min-width: 376px){
+    body {
+        background-position: 10rem -38rem, 95rem 40rem;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 850px 850px, 1200px 1200px;
+    }
+
+    /* Card section */
+    .card {
+        max-width: 400px;
+    }
+    /* Profile pic section */
+    .pic-container {
+        left: 34.3%;
+    }
+    .profile-pic {
+        height: 100px;
+        width: 100px;
+    }
+    /* Name, age and location section */
+    .name-age {
+        font-size: 1.8rem;
+    }
+    /* Social media info section */
+    .status-info {
+        font-size: 1.8rem;
+    }
+    .location {
+        font-size: 1.4rem;
+    }
+}
